@@ -5,7 +5,7 @@ import javax.swing.*;
 public class MinefieldGUI extends JFrame {
     private final int rows = 16;
     private final int columns = 16;
-    private final int totalMines = 10;
+    private final int totalMines = 20;
     private final JButton[][] buttons = new JButton[rows][columns];
     private final Minefield minefield;
     private boolean gameOver;

@@ -2,6 +2,8 @@
 
 A Minefield game built in Java with a graphical user interface (GUI). This project showcases Java’s object-oriented programming capabilities and leverages the Swing library to create a smooth and intuitive gameplay experience. Players must strategically reveal cells while avoiding hidden mines to win!
 
+![Alt text](/MineSweeper/images/Minefield.png "a title")
+
 ## Features
 
 **Interactive GUI**: Built using Java’s Swing framework for a responsive and engaging interface.
