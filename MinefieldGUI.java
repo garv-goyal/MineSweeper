@@ -40,15 +40,15 @@ public class MinefieldGUI extends JFrame {
         topPanel.setLayout(new BorderLayout());
 
         mineCounterLabel = new JLabel("Mines: " + totalMines);
-        mineCounterLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        mineCounterLabel.setFont(new Font("Cambria", Font.BOLD, 24));
         mineCounterLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         timerLabel = new JLabel("Time: 0");
-        timerLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        timerLabel.setFont(new Font("Cambria", Font.BOLD, 24));
         timerLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         JButton resetButton = new JButton("Restart");
-        resetButton.setFont(new Font("Arial", Font.BOLD, 18));
+        resetButton.setFont(new Font("Cambria", Font.BOLD, 24));
         resetButton.addActionListener(e -> restartGame());
 
         topPanel.add(mineCounterLabel, BorderLayout.WEST);
@@ -66,7 +66,7 @@ public class MinefieldGUI extends JFrame {
             for(int j=0; j < columns; j++) {
                 JButton button = new JButton();
                 button.setPreferredSize(new Dimension(40,40));
-                button.setFont(new Font("Arial", Font.BOLD, 16));
+                button.setFont(new Font("Cambria", Font.BOLD, 14));
                 button.setMargin(new Insets(0,0,0,0));
                 button.setFocusPainted(false);
                 button.addMouseListener(new CellMouseListener(i, j));
@@ -96,7 +96,7 @@ public class MinefieldGUI extends JFrame {
             for(int j=0; j < columns; j++) {
                 if(minefield.getCell(i,j).isMine()) {
                     buttons[i][j].setText("💣");
-                    buttons[i][j].setForeground(Color.RED);
+                    buttons[i][j].setForeground(Color.BLUE);
                 }
                 buttons[i][j].setEnabled(false);
             }
@@ -129,7 +129,7 @@ public class MinefieldGUI extends JFrame {
 
         if(cell.isMine()) {
             button.setText("💣");
-            button.setForeground(Color.RED);
+            button.setForeground(Color.BLUE);
             revealAllMines();
             timer.stop();
             JOptionPane.showMessageDialog(this, "Game Over! You hit a mine.");
